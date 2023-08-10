@@ -1,6 +1,6 @@
 climate %>% 
   select(ends_with("Temperature")) %>% 
-  head(.,3) %>%
+  head(4,) %>%
   glimpse()
 
 
@@ -33,6 +33,14 @@ by_cyl <- mtcars %>% group_by(cyl)
 # grouping doesn't change how the data looks (apart from listing
 # how it's grouped):
 by_cyl
+
+df <- data.frame(A = c(1, 2, 3),
+                 B = c(4, 5, 6),
+                 C = c(7, 8, 9))
+
+# Compute the mean of columns A and B
+df_mean <- df %>% mutate(across(c(A, B), mean))
+df_mean
 
 # It changes how it acts with the other dplyr verbs:
 by_cyl %>% summarise(

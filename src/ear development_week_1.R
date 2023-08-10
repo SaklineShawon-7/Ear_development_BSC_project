@@ -28,8 +28,8 @@ morning_schedule<- wakeup(self) %>%
   put_on('clothes') %>% eat_1('breakfast')
 
 fg<-c(1,2,3,4,5)
-f1<-fg %>% str()
-f1
+fg %>% str()
+g
 
 fun1(object)
 
